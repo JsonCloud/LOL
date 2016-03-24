@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>九九乘法表</title>
+
+</head>
+<body>
+   <div id="tab">
+      <span></span>
+   </div>
+   <script>
+       var oDiv = document.getElementById("tab");
+       for (var i=1;i<=9;i++){
+           var oLi = document.createElement("ul");
+           oDiv.appendChild(oLi);
+           for( var j=1;j<=i;j++){
+               var span = document.createElement("span")
+               span.innerText = i+"*"+j+"="+i*j;
+               oLi.appendChild(span);
+           }
+
+       }
+   </script>
+</body>
+</html>

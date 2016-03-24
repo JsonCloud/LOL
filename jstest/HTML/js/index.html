@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>测试一</title>
+    <style>
+        div,select,option{
+            
+        }
+
+        #div2{
+            background-color: #ff9a3f;
+            width: 100px;
+            height: 100px;
+            overflow-y: auto;
+            overflow-x: auto;
+        }
+
+    </style>
+</head>
+<body>
+   <div id="div1" style="width: 100px;height: 100px;background-color: antiquewhite"></div>
+   <div id="div2">我是一个div</div>
+   <select id="mySelect" name="mySelect" size="6">
+       <option value="java" >疯狂Java讲义</option>
+       <option value="ajx" selected>疯狂Ajx讲义</option>
+       <option value="HTML">疯狂HTML讲义</option>
+       <option value="xml">疯狂XML讲义</option>
+       <option value="ejb">疯狂Java EE讲义</option>
+       <option value="iOS">疯狂iOS讲义</option>
+   </select></br>
+
+   <input id="input1" type="button" value="第一个" onclick="change(curTaget.options[0])">
+   <input type="button" value="下一个" onclick="change(curTaget.options[curTaget.selectedIndex+1])">
+   <input type="button" value="上一个" onclick="change(curTaget.options[curTaget.selectedIndex-1])">
+   <input type="button" value="最后一个" onclick="change(curTaget.options[curTaget.length-1])">
+   <script type="text/javascript">
+       var person1 = {name:"kuli",height:"170cm"};
+       person1.weight = '90kg';
+       person1['weight'] = '110kg'
+       console.log(person1.weight);
+       var oIput = document.getElementById("input1");
+       var getText = function(target){
+           var text =  target.value;
+           console.log(text);
+           console.log(target.selectedIndex);
+           console.log(getText(oIput));
+       }
+       var arr = new Array;
+       console.dir(arr);
+
+   </script>
+   <script type="text/javascript" src="index.js"></script>
+</body>
+</html>
+<footer></footer>
